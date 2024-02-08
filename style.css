@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #E6B9DE; /* Light pink background */
+    color: #4942E4; /* Dark blue text */
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff; /* White container background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+}
+
+h1 {
+    color: #11009E; /* Lighter blue heading */
+}
+
+input[type="text"] {
+    width: calc(100% - 80px);
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #4942E4; /* Dark blue border */
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #11009E; /* Lighter blue button background */
+    color: #ffffff; /* White button text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4942E4; /* Dark blue on hover */
+}
+
+#shortUrlContainer {
+    display: none; /* Hide the shortened URL container by default */
+    margin-top: 20px;
+}
+
+#shortUrl {
+    color: #4942E4; /* Dark blue for shortened URL text */
+}
+
+#shortUrlValue {
+    color: #11009E; /* Lighter blue for the shortened URL itself */
+}
+
+#copyButton {
+    padding: 5px 10px;
+    background-color: #4942E4; /* Dark blue button background */
+    color: #ffffff; /* White button text */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#copyButton:hover {
+    background-color: #11009E; /* Lighter blue on hover */
+}

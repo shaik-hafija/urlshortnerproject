@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shortened URL</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #4942E4;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            color: #11009E;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        .copy-button {
+            padding: 5px 10px;
+            background-color: #4942E4;
+            color: #ffffff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copy-button:hover {
+            background-color: #11009E;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Shortened URL</h1>
+        <!-- <p>Original URL: <%= originalurl %></p> -->
+        <p><b style="color: #e44242;">Shortened URL:</b> <span id="shortUrl"><%= shorturl %></span> <button class="copy-button" onclick="copyShortUrl()">Copy</button></p>
+    </div>
+
+    <script>
+        function copyShortUrl() {
+            var shortUrl = document.getElementById('shortUrl');
+            var range = document.createRange();
+            range.selectNode(shortUrl);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand('copy');
+            window.getSelection().removeAllRanges();
+            alert('Shortened URL copied to clipboard!');
+        }
+    </script>
+</body>
+</html>

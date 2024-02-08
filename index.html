@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <!-- Link to external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #E6B9DE; /* Light pink background */
+        color: #4942E4; /* Dark blue text */
+    }
+    
+    .container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff; /* White container background */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+    }
+    
+    h1 {
+        color: #11009E; /* Lighter blue heading */
+    }
+    
+    input[type="text"] {
+        width: calc(100% - 80px);
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #4942E4; /* Dark blue border */
+        border-radius: 5px;
+    }
+    
+    input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #11009E; /* Lighter blue button background */
+        color: #ffffff; /* White button text */
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    input[type="submit"]:hover {
+        background-color: #4942E4; /* Dark blue on hover */
+    }
+    
+    #shortUrlContainer {
+    display: none;
+    margin-top: 20px;
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd; /* Light gray border */
+}
+
+#shortUrl {
+    margin: 0;
+    color: #4942E4;
+}
+
+#shortUrlValue {
+    font-weight: bold;
+    color: #11009E;
+}
+
+#copyButton {
+    padding: 5px 10px;
+    background-color: #4942E4;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#copyButton:hover {
+    background-color: #11009E;
+}
+
+    
+</style>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <!-- Form for submitting URL to be shortened -->
+        <form method="POST" action="/shorten">
+            <input type="text" placeholder="Enter URL to shorten" name="originalurl" id="originalurl" required>
+            <input type="submit" value="Shorten">
+        </form>
+        
+        <!-- Container to display the shortened URL -->
+        <div id="shortUrlContainer">
+            <p id="shortUrl">Shortened URL: <span id="shortUrlValue"></span> <button id="copyButton">Copy</button></p>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
